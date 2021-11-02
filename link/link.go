@@ -63,6 +63,10 @@ type MatchSection struct {
 }
 
 type LinkSection struct {
+	systemd.KeyList        // KeyList to store unknown keys
+	Comment         string // Section Comment
+	systemd.KeyComments
+
 	// A description of the device.
 	Description *string `systemd:",omitempty"`
 
